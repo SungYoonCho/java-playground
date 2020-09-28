@@ -16,7 +16,7 @@ public class Gugudan_plus2 {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("¸î ´ÜÀ» Ãâ·ÂÇÏ½Ã°Ú½À´Ï±î? : ");
+		System.out.println("ëª‡ ë‹¨ì„ ì¶œë ¥í• ê¹Œìš”? : ");
 		Scanner scanner = new Scanner(System.in);
 		String inputValue = scanner.nextLine();
 		String[] splitedValue = inputValue.split(",");

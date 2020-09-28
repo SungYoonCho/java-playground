@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Gugudan {
 	public static void main(String[] args) {
-		// 2´Ü
-//		System.out.println("2´Ü");
+		// 2ë‹¨
+//		System.out.println("2ë‹¨");
 //		System.out.println(2 * 1);
 //		System.out.println(2 * 2);
 //		System.out.println(2 * 3);
@@ -14,8 +14,8 @@ public class Gugudan {
 //		System.out.println(2 * 8);
 //		System.out.println(2 * 9);
 		
-		// 3´Ü
-//		System.out.println("3´Ü");
+		// 3ë‹¨
+//		System.out.println("3ë‹¨");
 //		System.out.println(3 * 1);
 //		System.out.println(3 * 2);
 //		System.out.println(3 * 3);
@@ -46,8 +46,8 @@ public class Gugudan {
 //		result = 4 * 9;
 //		System.out.println(result);
 		
-		// 5´Ü
-		System.out.println("±¸±¸´Ü Áß Ãâ·ÂÇÒ ´ÜÀº? : ");
+		// 5ë‹¨
+		System.out.println("ëª‡ ë‹¨ì„ ì¶œë ¥í• ê¹Œìš”? : ");
 		Scanner scanner = new Scanner(System.in);
 		int number = scanner.nextInt();
 		System.out.println(number * 1);

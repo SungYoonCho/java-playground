@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Gugudan_if {
 
 	public static void main(String[] args) {
-		System.out.println("¸î ´ÜÀ» Ãâ·ÂÇÒ±î¿ä?");
+		System.out.println("ëª‡ ë‹¨ì„ ì¶œë ¥í• ê¹Œìš”?");
 		Scanner scanner = new Scanner(System.in);
 		int n = scanner.nextInt();
 		if (n >= 2 && n <= 9) {
@@ -12,7 +12,7 @@ public class Gugudan_if {
 			}			
 		}
 		else {
-			System.out.println("2ÀÌ»ó, 9ÀÌÇÏÀÇ °ª¸¸ ÀÔ·ÂÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+			System.out.println("2ë³´ë‹¤ ìž‘ê±°ë‚˜ 9ë³´ë‹¤ í° ê°’ì€ ìž…ë ¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 	}
 

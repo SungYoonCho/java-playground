@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Gugudan_Main {
 
 	public static void main(String[] args) {
-		System.out.println("¸î ´ÜÀ» Ãâ·ÂÇÏ½Ã°Ú½À´Ï±î? : ");
+		System.out.println("ëª‡ ë‹¨ì„ ì¶œë ¥í• ê¹Œìš”? : ");
 		Scanner scanner = new Scanner(System.in);
 		int times = scanner.nextInt();
 		int[] result = Gugudan_class.calculate(times);
