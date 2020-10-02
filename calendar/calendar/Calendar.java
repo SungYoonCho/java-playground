@@ -33,7 +33,18 @@ public class Calendar {
 				break;
 			}
 			
-			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));			
+			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
+			if (cal.getMaxDaysOfMonth(month) == 28) {
+				cal.printSampleCalender();				
+			}
+			else if (cal.getMaxDaysOfMonth(month) == 30) {
+				cal.printSampleCalender();
+				System.out.println("29 30");
+			}
+			else {
+				cal.printSampleCalender();
+				System.out.println("29 30 31");
+			}
 		}
 		
 		System.out.println("반복이 완료되었습니다.");
