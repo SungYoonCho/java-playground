@@ -5,9 +5,24 @@ import java.util.Scanner;
 public class Calendar {
 	
 	private static final int[] Max_Days = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+	private static final int[] Leap_Max_Days = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 	
-	public int getMaxDaysOfMonth(int month) {
-		return Max_Days[month - 1];
+	public boolean isLeapYear(int year) {
+		if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
+	public int getMaxDaysOfMonth(int year, int month) {
+		if (isLeapYear(year)) {
+			return Leap_Max_Days[month - 1];
+		}
+		else {
+			return Max_Days[month - 1];
+		}
 	}
 	
 	public void printCalendar(int year, int month) {
@@ -15,7 +30,7 @@ public class Calendar {
 		System.out.println("  월    화    수   목    금    토   일");
 		System.out.println("--------------------");
 		
-		int maxDay = getMaxDaysOfMonth(month);
+		int maxDay = getMaxDaysOfMonth(year, month);
 		
 		for (int i = 1; i <= maxDay; i++) {
 			System.out.printf("%2d ", i);

@@ -10,17 +10,20 @@ public class Prompt {
 		Scanner scanner = new Scanner(System.in);
 		Calendar cal = new Calendar();
 
-		while (true) {
+		while (true) {			
+			System.out.println("년도를 입력하세요.");
+			System.out.print("Year> ");
+			int year = scanner.nextInt();
 			System.out.println("달을 입력하세요.");
-			System.out.print(PROMPT);
+			System.out.print("Month> ");
 			int month = scanner.nextInt();
 
 			if (month == -1) {
 				break;
 			}
 
-			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
-			cal.printCalendar(2020, month);
+			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(year, month));
+			cal.printCalendar(year, month);
 		}
 
 		System.out.println("반복이 완료되었습니다.");
