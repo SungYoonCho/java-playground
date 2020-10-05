@@ -1,11 +1,19 @@
 package calendar;
 
-import java.util.Scanner;
-
 public class Calendar {
 	
 	private static final int[] Max_Days = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 	private static final int[] Leap_Max_Days = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+	private static final String[] Weekdays = { "SU", "MO", "TU", "WE", "TH", "FR", "SA" };
+	
+	public int getIndexOfWeekdays(String weekday) {
+		for (int i = 0; i < 7; i++) {
+			if (weekday.contentEquals(Weekdays[i])) {
+				return i;
+			}
+		}
+		return -1;
+	}
 	
 	public boolean isLeapYear(int year) {
 		if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
@@ -25,16 +33,21 @@ public class Calendar {
 		}
 	}
 	
-	public void printCalendar(int year, int month) {
-		System.out.printf("    <<%4d년%3d월>>\n", year, month);
-		System.out.println("  월    화    수   목    금    토   일");
-		System.out.println("--------------------");
+	public void printCalendar(int year, int month, String weekday) {
+		System.out.printf("\n    <<%4d년%3d월>>\n", year, month);
+		System.out.println("SU MO TU WE TH FR SA");
+		System.out.println("---------------------");
 		
 		int maxDay = getMaxDaysOfMonth(year, month);
+		int weekdayidx = getIndexOfWeekdays(weekday);
+		
+		for (int i = 0; i < weekdayidx; i++) {
+			System.out.print("   ");			
+		}
 		
 		for (int i = 1; i <= maxDay; i++) {
 			System.out.printf("%2d ", i);
-			if (i % 7 == 0) {
+			if ((i + weekdayidx) % 7 == 0) {
 				System.out.println();
 			}
 		}
