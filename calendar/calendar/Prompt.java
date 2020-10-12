@@ -22,13 +22,10 @@ public class Prompt {
 				System.out.println("잘못된 입력입니다.");
 				continue;
 			}
-			System.out.println("첫째 날의 요일을 입력하세요.(SU, MO, TU, WE, TH, FR, SA)");
-			System.out.print("Weekday> ");
-			String weekday = scanner.next();
 			
 			
 //			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(year, month));
-			cal.printCalendar(year, month, weekday);
+			cal.printCalendar(year, month);
 		}
 
 		System.out.println("Bye~!!!!");
