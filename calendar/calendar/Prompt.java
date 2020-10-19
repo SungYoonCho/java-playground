@@ -49,7 +49,7 @@ public class Prompt {
 	public void runPrompt1() {
 		Calendar cal = new Calendar();
 		
-		System.out.println("[일정 등록] 날짜를 입력하세요.");
+		System.out.println("[일정 등록] 날짜를 입력하세요.(YYYY-MM-DD)");
 		System.out.print("> ");
 		String date = scanner.nextLine();
 		System.out.println("일정을 입력하세요.");
@@ -62,7 +62,7 @@ public class Prompt {
 	public void runPrompt2() {
 		Calendar cal = new Calendar();
 		
-		System.out.println("[일정 검색] 날짜를 입력하세요.");
+		System.out.println("[일정 검색] 날짜를 입력하세요.(YYYY-MM-DD)");
 		System.out.print("> ");
 		String date = scanner.nextLine();
 		cal.printSchedule(date);
