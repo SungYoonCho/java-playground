@@ -1,10 +1,38 @@
 package calendar;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Calendar {
 	
 	private static final int[] Max_Days = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 	private static final int[] Leap_Max_Days = { 0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 	private static final String[] Weekdays = { "SU", "MO", "TU", "WE", "TH", "FR", "SA" };
+	private static final HashMap<String,ArrayList<String>> schedule = new HashMap<>();
+	
+	public void saveSchedule(String date, String content) {
+		if (schedule.get(date) == null) {
+			ArrayList<String> contents = new ArrayList<>();
+			contents.add(content);
+			schedule.put(date, contents);
+		}
+		else {
+			ArrayList<String> contents = schedule.get(date);
+			contents.add(content);
+			schedule.put(date, contents);			
+		}
+	}
+	
+	public void printSchedule(String date) {
+		ArrayList<String> contents = schedule.get(date);
+		int schedule_num = contents.size();
+		
+		System.out.printf("%d개의 일정이 있습니다.\n", schedule_num);
+		for (int i = 0; i < schedule_num; i++) {
+			System.out.printf("%d. %s\n", i + 1, contents.get(i));
+		}
+		
+	}
 	
 	public int getIndexOfWeekdays(String weekday) {
 		for (int i = 0; i < 7; i++) {
